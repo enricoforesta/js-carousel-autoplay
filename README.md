@@ -13,3 +13,9 @@ Aggiungere bottoni di start / stop.
 1. Le funzioni anonime, le togliamo dal click, gli assegnamo un nome, e poi lo passiamo come argomento all evento.
 
 2. Uso "setInverval" per creare un ciclo infinito.
+
+# Bonus
+
+1. Nell Html Creo due pulsanti.
+
+2. Il primo attiva l autoplay, Il secondo blocca l autoplay

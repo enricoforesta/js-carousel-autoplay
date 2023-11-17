@@ -41,13 +41,29 @@ const elementDown = document.querySelector(".prev");
 console.log({ elementUp });
 console.log({ elementDown });
 
-elementUp.addEventListener("click", nextFunc)
-setInterval(nextFunc, 3000);
+// Pulsanti auto-play
+let time;
+
+const start = document.querySelector(".start");
+start.addEventListener("click", function () {
+  console.log("ho cliccato start")
+  time = setInterval(nextFunc, 3000);
+});
+
+const stop = document.querySelector(".stop");
+stop.addEventListener("click", function () {
+  console.log("ho cliccato stop")
+  clearInterval(time);
+})
+
+elementUp.addEventListener("click", nextFunc);
 elementDown.addEventListener("click", prevFunc)
 
 const elementContainer = document.querySelector(".container");
 
-function nextFunc(){
+// Funzioni
+
+function nextFunc() {
   elementActive[elementCorrente].classList.remove("active");
   if (elementCorrente === elementActive.length - 1) {
     elementCorrente = 0;
@@ -58,9 +74,7 @@ function nextFunc(){
   console.log(elementCorrente)
 }
 
-
-
-function prevFunc(){
+function prevFunc() {
   elementActive[elementCorrente].classList.remove("active");
   if (elementCorrente === 0) {
     elementCorrente = elementActive.length - 1;
