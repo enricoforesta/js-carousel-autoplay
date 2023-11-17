@@ -1,7 +1,4 @@
-/*
-<div class="item active">
-  <img src="./img/01.jpg" alt="" />
-</div>*/
+
 
 "use strict"
 
@@ -27,6 +24,10 @@ elementItems.innerHTML += elementItem;
 
 //Variabile immagine corrente
 let elementCorrente = 0;
+
+
+const elementContainer = document.querySelector(".container");
+elementContainer.innerHTML += (`<div class="items-thumb"></div>`);
 
 // Aggiungo la classe Active
 const elementActive = document.querySelectorAll(".item");
@@ -59,7 +60,20 @@ stop.addEventListener("click", function () {
 elementUp.addEventListener("click", nextFunc);
 elementDown.addEventListener("click", prevFunc)
 
-const elementContainer = document.querySelector(".container");
+
+
+const elementImmagini = document.querySelector(".items-thumb");
+
+let elementThumb = " "
+
+for (let i = 0; i < immagini.length; i++) {
+
+  elementThumb += (`<img src="img/${immagini[i]}" alt="" />`)
+}
+
+elementImmagini.innerHTML += elementThumb;
+
+
 
 // Funzioni
 

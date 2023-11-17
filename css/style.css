@@ -4,16 +4,21 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: rgba(0, 0, 0, 0.88);
 }
+
 /* Contenitore  */
 .container {
     width: 900px;
     height: 100vh;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
     align-items: center;
+    position: relative;
+    flex-wrap: wrap;
 }
 
 /* Contenitore items img */
@@ -99,4 +104,28 @@ body{
     display: flex;
     flex-direction: column;
     width: 108px;
+}
+
+/* Bottoni */
+.bottoni button {
+    padding: 10px;
+    background-color: blue;
+    color: red;
+}
+
+.bottoni {
+    position: absolute;
+    bottom: 5%;
+    right: 55%;
+}
+
+.items-thumb {
+
+    display: flex;
+    flex-direction: column;
+    width: 108px;
+}
+
+.active-bg{
+    border: 2 px solid white;
 }
